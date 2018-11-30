@@ -30,7 +30,7 @@ body {
     flex-flow: row wrap;
 }
 
-/* THe flex peroperty */
+/* THe flex peroperty makes it so when the user changes the size of the window the elements shrink and grow at a certian size and only go down to a certain size.*/
 section#sheet{
     flex: 3 1 301px;
 }
@@ -46,11 +46,14 @@ article {
 	Mobile Devices: 0 - 480 pixels
    ============================================
 */
+
+/* Ths media query tells the browser to follow these rules only when the size of the sreen fall into the parameters given. */
 @media only screen and (max-width: 480px) {
     img.panel {
         width: 100%;
     }
 
+    /* The order tells the browser which elemnts go ina certain order instead of rearranging the html file. These styles that are specific to moble fall into the single column desing making it look better on a smaller screen */
     nav.horizontal {
         -webkit-order: 99;
         order: 99; 
