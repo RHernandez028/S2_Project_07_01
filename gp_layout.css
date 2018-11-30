@@ -22,7 +22,22 @@
 @import url("gp_designs.css");
 
 /* Flex Layout Styles */
+/* The body is set as a fkex box to make the order of the elements and moving the them much easier */
+body {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: row wrap;
+    flex-flow: row wrap;
+}
 
+/* THe flex peroperty */
+section#sheet{
+    flex: 3 1 301px;
+}
+
+article {
+    flex: 1 3 180px;
+}
 
 
 
@@ -31,7 +46,21 @@
 	Mobile Devices: 0 - 480 pixels
    ============================================
 */
+@media only screen and (max-width: 480px) {
+    img.panel {
+        width: 100%;
+    }
 
+    nav.horizontal {
+        -webkit-order: 99;
+        order: 99; 
+    }
+    
+    body > footer {
+        -webkit-order: 100;
+        order: 100; 
+    }
+}
 
 
 
@@ -39,4 +68,33 @@
 	Tablet and Desktop Devices: Greater than 480 pixels
    ======================================================
 */
+@media only screen and (min-width: 481px) {
+    nav.horizontal > ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex: row nowrap;
+        flex-flow: row nowrap;
+        height: 40px;
+    } 
 
+    nav.horizontal > ul > li {
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+    img.size1 {
+        width: 100%;
+    }
+
+    img.size2 {
+        width: 60%
+    }
+
+    img.size3 {
+        width: 40%;
+    }
+
+    img.size4 {
+        width: 30%;
+    }
+}
